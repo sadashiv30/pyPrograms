@@ -13,9 +13,7 @@ Score Grade
 If the user enters a value out of range, print a suitable error message and exit. For the test, enter a score of 0.85.
 '''
 score = float(raw_input("Enter score: "))
-if(score >= 0.0):
-    if(score <= 1.0):
-        
+if(score >= 0.0 and score <= 1.0):
         if(score >= 0.9):
             print "A"
         elif(score >= 0.8):
@@ -26,8 +24,6 @@ if(score >= 0.0):
             print ("D")
         else:
             print("F")
-    else:
-        print("Error 2")
 else:
     print ("Error")
     
