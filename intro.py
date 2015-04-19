@@ -203,7 +203,7 @@ secondary_colours = ['Purple', 'Orange', 'Green']
 main_colours = primary_colours + secondary_colours
 
 # Try printing main_colours
-print main_colours 
+print main_colours
 
 # 15. You can find how many there are by using len(your_list). Try it below
 
@@ -390,7 +390,7 @@ num = range(1001);
 sum1=0
 for i in num:
    temp=int(i)
-   digit0= temp%10; 
+   digit0= temp%10;
    temp = temp /10;
    digit1= temp%10;
    temp = temp /10;
@@ -400,7 +400,7 @@ for i in num:
    #print (i , digit3, digit2, digit1, digit0)
    sum1+=digit0 + digit1+ digit2 + digit3
 print sum1
-   
+
 
 # Clue: range(10) => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 # Clue: str(87) => '87'
