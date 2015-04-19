@@ -21,7 +21,7 @@ message = "Level Two"
 
 # Add a line below to print this variable
 
-# GO!
+print message
 
 # 3. The variable above is called a string
 # You can use single or double quotes (but must close them)
@@ -35,7 +35,7 @@ b = 654
 c = a + b
 
 # Try printing the value of c below to see the answer
-# GO!
+print c
 
 # 5. You can use other operators like subtract (-) and multiply (*)
 # Try some below by replacing the word with the correct operator
@@ -44,6 +44,8 @@ c = a + b
 # b minus a
 # 12 times 4
 # 103 add 999
+print a*b
+print b-a
 
 # GO!
 
@@ -63,16 +65,16 @@ d = 10 + a - c
 # 7. You can also use '+' to add together two strings
 
 greeting = 'Hi '
-name = ''  # enter your name in this string
+name = 'John Doe'  # enter your name in this string
 
 message = greeting + name
-# print(message)
+print(message)
 
 # GO!
 
 # 8. Try adding a number and a string together and you get an error:
 
-# age =  # enter your age here (as a number)
+age = 34 # enter your age here (as a number)
 
 # print(name + ' is ' + age + ' years old')
 
@@ -84,7 +86,7 @@ message = greeting + name
 
 # 9. We can convert numbers to strings like this:
 
-# print(name + ' is ' + str(age) + ' years old')
+print(name + ' is ' + str(age) + ' years old')
 
 # GO!
 
@@ -92,9 +94,9 @@ message = greeting + name
 
 # Or we could just make sure we enter it as a string:
 
-# age =  # enter your age here, as a string
+age = 'thitry'  # enter your age here, as a string
 
-# print(name + ' is ' + age + ' years old')
+print(name + ' is ' + age + ' years old')
 
 # GO!
 
@@ -137,7 +139,7 @@ if can_afford_both:
 else:
     message = "You can't afford both devices"
 
-# print(message)  # what do you expect to see here?
+print(message)  # what do you expect to see here?
 
 # GO!
 
@@ -159,7 +161,7 @@ if total_cost <= money:
 else:
     message = "You can't afford 3 raspberry pies"
 
-# print(message)  # what do you expect to see here?
+print(message)  # what do you expect to see here?
 
 # GO!
 
@@ -178,7 +180,7 @@ colours = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
 colours.append('Black')
 colours.append('White')
 
-# print('Black' in colours)  # Should this be different now?
+print('Black' in colours)  # Should this be different now?
 
 # GO!
 
@@ -190,6 +192,7 @@ colours.extend(more_colours)
 
 # Try printing the list to see what's in it
 
+print colours
 # GO!
 
 # 14. You can add two lists together in to a new list using +
@@ -200,20 +203,21 @@ secondary_colours = ['Purple', 'Orange', 'Green']
 main_colours = primary_colours + secondary_colours
 
 # Try printing main_colours
+print main_colours 
 
 # 15. You can find how many there are by using len(your_list). Try it below
 
 # How many colours are there in main_colours?
 
 # GO!
-
+print len(main_colours)
 all_colours = colours + main_colours
 
 # How many colours are there in all_colours?
 # Do it here. Try to think what you expect before you run it
 
 # GO!
-
+print len(all_colours)
 # Did you get what you expected? If not, why not?
 
 # 16. You can make sure you don't have duplicates by adding to a set
@@ -222,9 +226,9 @@ even_numbers = [2, 4, 6, 8, 10, 12]
 multiples_of_three = [3, 6, 9, 12]
 
 numbers = even_numbers + multiples_of_three
-# print(numbers, len(numbers))
+print(numbers, len(numbers))
 numbers_set = set(numbers)
-# print(numbers_set, len(numbers_set))
+print(numbers_set, len(numbers_set))
 
 # GO!
 
@@ -239,10 +243,9 @@ my_class = ['Sarah', 'Bob', 'Jim', 'Tom', 'Lucy', 'Sophie', 'Liz', 'Ed']
 # Below is a multi-line comment
 # Delete the ''' from before and after to uncomment the block
 
-'''
+
 for student in my_class:
-    print(student)
-'''
+        print(student)
 
 # Add all the names of people in your group to this list
 
@@ -261,21 +264,26 @@ last_three = full_name[-3:]  # [17:] and [17:20] also work
 middle = full_name[8:14]
 
 # Try printing these, and try to make a word out of the individual letters
+print first_letter
+print first_three
+
 
 # 19. You can also split the string on a specific character
 
 my_sentence = "Hello, my name is Fred"
-parts = my_sentence.split(',')
+parts = my_sentence.split(' ')
 
-# print(parts)
-# print(type(parts))  # What type is this variable? What can you do with it?
+print(parts)
+print(type(parts))  # What type is this variable? What can you do with it?
 
 # GO!
 
 my_long_sentence = "This is a very very very very very very long sentence"
 
 # Now split the sentence and use this to print out the number of words
-
+words = my_long_sentence.split(" ")
+print len(words)
+print words
 # GO! (Clues below if you're stuck)
 
 # Clue: Which character do you split on to separate words?
@@ -286,7 +294,7 @@ my_long_sentence = "This is a very very very very very very long sentence"
 
 person = ('Bobby', 26)
 
-# print(person[0] + ' is ' + str(person[1]) + ' years old')
+print(person[0] + ' is ' + str(person[1]) + ' years old')
 
 # GO!
 
@@ -302,6 +310,11 @@ students = [
 # Now write a loop to print each of the students' names and age
 
 # GO!
+print students[2][0]
+c=0
+for i in students:
+    print((students[c][0]) + 'is '+ str(students[c][1]) + " years old")
+    c=c+1
 
 # 21. Tuples can be any length. The above examples are 2-tuples.
 
@@ -332,11 +345,11 @@ addresses = {
 
 # You can check if a key or value exists in a given dictionary:
 
-# print('David' in addresses)  # [False]
-# print('Daniel' in addresses)  # [True]
-# print('999' in addresses)  # [False]
-# print('999' in addresses.values())  # [True]
-# print(999 in addresses.values())  # [False]
+print('David' in addresses)  # [False]
+print('Daniel' in addresses)  # [True]
+print('999' in addresses)  # [False]
+print('999' in addresses.values())  # [True]
+print(999 in addresses.values())  # [False]
 
 # GO!
 
@@ -346,25 +359,25 @@ addresses = {
 
 # Try changing Amy's phone number to a new number
 
-# addresses['Amy'] = '0115 236 359'
-# print(addresses['Amy'])
+addresses['Amy'] = '0115 236 359'
+print(addresses['Amy'])
 
 # GO!
 
 # Delete Daniel from the dictinary
 
-# print('Daniel' in addresses)  # [True]
-# del addresses['Daniel']
-# print('Daniel' in addresses)  # [False]
+print('Daniel' in addresses)  # [True]
+del addresses['Daniel']
+print('Daniel' in addresses)  # [False]
 
 # GO!
 
 # You can also loop over a dictionary and access its contents:
 
-'''
+
 for name in addresses:
     print(name, addresses[name])
-'''
+
 
 # GO!
 
@@ -372,6 +385,22 @@ for name in addresses:
 # What is the sum of all the digits in all the numbers from 1 to 1000?
 
 # GO!
+num = range(1001);
+#print(num)
+sum1=0
+for i in num:
+   temp=int(i)
+   digit0= temp%10; 
+   temp = temp /10;
+   digit1= temp%10;
+   temp = temp /10;
+   digit2= temp%10;
+   temp = temp /10;
+   digit3= temp%10;
+   #print (i , digit3, digit2, digit1, digit0)
+   sum1+=digit0 + digit1+ digit2 + digit3
+print sum1
+   
 
 # Clue: range(10) => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 # Clue: str(87) => '87'
